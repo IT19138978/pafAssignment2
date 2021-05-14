@@ -7,11 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-
 <title>Innovator Management</title>
-
-<!-- link to page -->>
-
 <link rel="stylesheet" href="Views/bootstrap.min.css"> 
 <script src="Components/jquery-3.4.1.min.js"></script> 
 <script src="Components/innovator.js"></script> 
@@ -20,8 +16,6 @@
 <div class="container"> 
 	<div class="row">  
 		<div class="col-6"> 
-		<!-- comment innovator form  --> 
-		
 			<h1>INNOVATOR DETAILS</h1>
 				<form id="formInnovator" name="formInnovator" method="post" action="InnovatorJ.jsp">  
 					Innovator Name:  
