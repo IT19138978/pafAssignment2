@@ -86,7 +86,41 @@ public class Innovator {
 			ResultSet rs = stmt.executeQuery(query); 
 	 
 			// iterate through the rows in the result set    
-			 
+			while (rs.next())    
+			{     
+				String innovatorID = Integer.toString(rs.getInt("innovatorID")); 
+				 String innovatorName = rs.getString("innovatorName");
+				 String projName = rs.getString("projName");
+				 String price = rs.getString("price");
+				 String project = rs.getString("project");
+			
+	 
+				// Add into the html table 
+				output += "<tr><td><input id=\'hidInnovatorIDUpdate\' name=\'hidInnovatorIDUpdate\' type=\'hidden\' value=\'" + innovatorID + "'>" 
+							+ innovatorName + "</td>"; 
+				output += "<td>" + projName + "</td>";
+				output += "<td>" + price + "</td>";
+				output += "<td>" + project + "</td>";
+
+				  
+	 
+				// buttons     
+				output +="<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"       
+						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-iid='" + innovatorID + "'>" + "</td></tr>"; 
+			
+			}
+			con.close(); 
+	 
+			// Complete the html table    
+			output += "</table>";   
+		}   
+		catch (Exception e)   
+		{    
+			output = "Error while reading the Innovator.";    
+			System.err.println(e.getMessage());   
+		} 
+	 
+		return output;  
 	}
 	
 	public String updateInnovator(String innovatorID, String innovatorName, String projName, String price, String project)  
