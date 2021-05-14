@@ -20,6 +20,8 @@
 <div class="container"> 
 	<div class="row">  
 		<div class="col-6"> 
+		<!-- comment innovator form  --> 
+		
 			<h1>INNOVATOR DETAILS</h1>
 				<form id="formInnovator" name="formInnovator" method="post" action="InnovatorJ.jsp">  
 					Innovator Name:  
