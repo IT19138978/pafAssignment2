@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 
 
+//data base connection
 
 public class Innovator {
 	
@@ -23,6 +24,8 @@ public class Innovator {
 		}
 		return con;
 	}
+	
+	//insert
 
 	public String insertInnovator(String innovatorName, String projName, String price, String project)  
 	{   
@@ -64,6 +67,7 @@ public class Innovator {
 	  return output;  
 	} 
 	
+	//read
 	
 	public String readInnovator()  
 	{   
@@ -123,6 +127,8 @@ public class Innovator {
 		return output;  
 	}
 	
+	//update
+	
 	public String updateInnovator(String innovatorID, String innovatorName, String projName, String price, String project)  
 	{   
 		String output = ""; 
@@ -161,6 +167,8 @@ public class Innovator {
 	 
 	  return output;  
 	} 
+	
+	//delete
 	
 	public String deleteInnovator(String innovatorID)   
 	{   
